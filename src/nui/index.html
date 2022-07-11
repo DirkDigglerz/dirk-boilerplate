@@ -17,75 +17,14 @@
       background-color: transparent !important;
     }
 
-    .bag{
-      transition: backdrop-filter 5.5s;
-      position: absolute;
-      height: 100%;
-      width: 100%;
-    }
-
-
-
   </style>
 </head>
 <body>
-
-  <div class='bag'>
-
-  </div>
 
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
 <script type="text/javascript">
-
-
-
-    window.addEventListener('message',function(event) {
-      if (event.data.type == "show") {
-        console.log('show')
-        if (event.data.black == true){
-          console.log('Black Bag')
-          BlackBag()   
-        }else{
-          TransBag(event.data.blur)
-        }
-                
-      } else if (event.data.type == "remove") {
-        NoBag()
-      }
-    })
-
-
-
-    BlackBag = function(){
-      $('.bag').css("opacity","1.0");
-      $('.bag').css({
-        "background-image": "url('https://wallpaperaccess.com/full/3928401.jpg')",
-        "background-size": "100% 100%",
-        "background-repeat": "none"
-      });
-
-    }
-
-    TransBag = function(b){
-      $('.bag').css("opacity","0.95");
-      $('.bag').css({
-        // "background-color":"rgba(255,255,255,0.9)",
-        "background-image": "url('https://media.istockphoto.com/photos/plastic-texture-of-clear-wrinkled-plastic-picture-id97512627?k=20&m=97512627&s=612x612&w=0&h=sYPmnb6ZDwFWDDwKJnKgst4IdAFU_8DIgwWjJUUSsmw=')",
-        "background-size": "100% 100%",
-        // "filter":"blur(100px)",
-        "background-repeat": "none"
-      });
-
-    }
-
-    NoBag = function(){
-     $('.bag').css("background-color","transparent");
-     $('.bag').css("filter", "none");
-     $('.bag').css("background-image", "none");
-    }
-
 
 </script> 
 <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
